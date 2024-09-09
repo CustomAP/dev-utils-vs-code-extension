@@ -2,24 +2,7 @@ import React, { useState } from "react";
 import { Card, Elevation, InputGroup, H2 } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import "./CardGrid.css";
-
-const tools = [
-  {
-    id: "csv_to_json",
-    name: "CSV to JSON",
-    description: "Convert CSV to JSON",
-  },
-  {
-    id: "json_to_csv",
-    name: "JSON to CSV",
-    description: "Convert JSON to CSV",
-  },
-  {
-    id: "json_prettier",
-    name: "JSON Prettier",
-    description: "Make JSON Pretty",
-  },
-];
+import { tools } from "./tools_list";
 
 const CardGrid = () => {
   const [searchTerm, setSearchTerm] = useState("");
