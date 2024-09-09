@@ -32,6 +32,18 @@ export function activate(context: vscode.ExtensionContext) {
           </body>
         </html>
         `;
+
+    panel.webview.onDidReceiveMessage(
+      (message) => {
+        switch (message.type) {
+          case "copy":
+            vscode.window.showInformationMessage("Copied to clipboard!");
+            break;
+        }
+      },
+      undefined,
+      context.subscriptions
+    );
   });
 
   context.subscriptions.push(webview);
