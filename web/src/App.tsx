@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CardGrid from "./home/CardGrid";
 import JsonToCsv from "./utils/json_to_csv/JsonToCsv";
 import CsvToJson from "./utils/csv_to_json/CsvToJson";
+import JsonPrettier from "./utils/json_prettier/JsonPrettier";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="/" element={<CardGrid />} />
           <Route path="/util/csv_to_json" element={<CsvToJson />} />
           <Route path="/util/json_to_csv" element={<JsonToCsv />} />
+          <Route path="/util/json_prettier" element={<JsonPrettier />} />
           <Route path="*" element={<CardGrid />} />
         </Routes>
       </Router>

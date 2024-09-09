@@ -14,6 +14,11 @@ const tools = [
     name: "JSON to CSV",
     description: "Convert JSON to CSV",
   },
+  {
+    id: "json_prettier",
+    name: "JSON Prettier",
+    description: "Make JSON Pretty",
+  },
 ];
 
 const CardGrid = () => {
