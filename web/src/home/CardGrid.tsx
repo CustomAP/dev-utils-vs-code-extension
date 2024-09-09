@@ -3,25 +3,38 @@ import { Card, Elevation } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import "./CardGrid.css";
 
+const tools = [
+  {
+    id: "csv_to_json",
+    name: "CSV to JSON",
+    description: "Convert CSV to JSON",
+  },
+  {
+    id: "json_to_csv",
+    name: "JSON to CSV",
+    description: "Convert JSON to CSV",
+  },
+];
+
 const CardGrid = () => {
   const navigate = useNavigate();
 
-  const handleCardClick = (id: number) => {
+  const handleCardClick = (id: string) => {
     navigate(`/card/${id}`);
   };
 
   return (
     <div className="card-grid">
-      {[1, 2, 3, 4, 5, 6].map((item) => (
+      {tools.map((item) => (
         <Card
-          key={item}
+          key={item.id}
           elevation={Elevation.TWO}
           className="card-item"
           interactive={true}
-          onClick={() => handleCardClick(item)}
+          onClick={() => handleCardClick(item.id)}
         >
-          <h3>Card {item}</h3>
-          <p>This is a description for card {item}.</p>
+          <h3>{item.name}</h3>
+          <p>{item.description}</p>
         </Card>
       ))}
     </div>
