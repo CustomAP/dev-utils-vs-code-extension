@@ -3,6 +3,7 @@ import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
 import Papa from "papaparse";
 import "./JsonToCsv.css";
 import Header from "../common/Header";
+import CopyButton from "../common/CopyButton";
 
 interface JsonToCsvProps {
   initialJson?: string;
@@ -50,9 +51,16 @@ const JsonToCsv: React.FC<JsonToCsvProps> = ({ initialJson = "" }) => {
           onChange={handleInputChange}
           placeholder="Paste JSON array here..."
         />
-        <Button className="clear-button" onClick={handleClear}>
-          Clear
-        </Button>
+        <div>
+          <Button
+            className="clear-button"
+            intent="danger"
+            onClick={handleClear}
+          >
+            Clear Input
+          </Button>
+          <CopyButton text={csvText} label="Copy Result" />
+        </div>
 
         <H4>CSV Output</H4>
         <TextArea
