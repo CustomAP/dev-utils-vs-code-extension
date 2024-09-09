@@ -7,10 +7,15 @@
 
 .card-item {
   padding: 15px;
-  background-color: aliceblue;
 }
 
 .search-bar {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.dev-utils-title {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;

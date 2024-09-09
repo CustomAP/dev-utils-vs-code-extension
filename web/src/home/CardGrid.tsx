@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Elevation, InputGroup } from "@blueprintjs/core";
+import { Card, Elevation, InputGroup, H2 } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import "./CardGrid.css";
 
@@ -29,7 +29,11 @@ const CardGrid = () => {
   );
 
   return (
-    <div className="card-grid-container">
+    <div>
+      <div className="dev-utils-title">
+        <H2>Dev Utils</H2>
+      </div>
+
       <InputGroup
         placeholder="Search..."
         leftIcon="search"
