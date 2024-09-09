@@ -21,7 +21,7 @@ const CardGrid = () => {
   const navigate = useNavigate();
 
   const handleCardClick = (id: string) => {
-    navigate(`/card/${id}`);
+    navigate(`/util/${id}`);
   };
 
   const filteredTools = tools.filter((item) =>

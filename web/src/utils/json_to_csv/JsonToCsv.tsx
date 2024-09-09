@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
 import Papa from "papaparse";
-import "./index.css";
+import "./JsonToCsv.css";
 import Header from "../common/Header";
 
 interface JsonToCsvProps {
