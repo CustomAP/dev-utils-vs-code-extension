@@ -54,7 +54,7 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({ initialJson = "" }) => {
           >
             Clear Input
           </Button>
-          <CopyButton text={prettyJson} label="Copy Pretty JSON" />
+          <CopyButton text={prettyJson} label="Copy Result" />
         </div>
 
         <H4>Pretty JSON Output</H4>
