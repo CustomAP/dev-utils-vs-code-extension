@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, TextArea, Card, H4, H3 } from "@blueprintjs/core";
+import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
 import Papa from "papaparse";
 import "./index.css";
 import Header from "../common/Header";
