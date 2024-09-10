@@ -4,6 +4,8 @@ import CardGrid from "./home/CardGrid";
 import JsonToCsv from "./utils/json_to_csv/JsonToCsv";
 import CsvToJson from "./utils/csv_to_json/CsvToJson";
 import JsonPrettier from "./utils/json_prettier/JsonPrettier";
+import Base64Encoder from "./utils/base64encoder/Base64Encoder";
+import Base64Decoder from "./utils/base64decoder/Base64Decoder";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -24,6 +26,14 @@ const App = () => {
           <Route
             path="/util/json_prettier"
             element={<JsonPrettier vscode={vscode} />}
+          />
+          <Route
+            path="/util/base64_encoder"
+            element={<Base64Encoder vscode={vscode} />}
+          />
+          <Route
+            path="/util/base64_decoder"
+            element={<Base64Decoder vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

@@ -14,4 +14,14 @@ export const tools = [
     name: "JSON Prettier",
     description: "Make JSON Pretty",
   },
+  {
+    id: "base64_encoder",
+    name: "Base 64 Encoder",
+    description: "Encode to Base 64 String",
+  },
+  {
+    id: "base64_decoder",
+    name: "Base 64 Decoder",
+    description: "Decode a Base 64 String",
+  },
 ];

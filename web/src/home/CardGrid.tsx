@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Elevation, InputGroup, H2, H5, Button } from "@blueprintjs/core";
+import { Card, Elevation, InputGroup, H1, H5, Button } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import "./CardGrid.css";
 import { tools } from "./tools_list";
@@ -22,7 +22,7 @@ const CardGrid = ({ vscode = null }: CardGridProps) => {
   return (
     <div>
       <div className="dev-utils-title">
-        <H2>Dev Utils</H2>
+        <H1>Dev Utils</H1>
       </div>
 
       <InputGroup
