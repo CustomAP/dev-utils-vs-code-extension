@@ -2,6 +2,11 @@
 
 **Dev Utilities** is a 100% open-source and secure VS Code extension designed to enhance your development workflow by providing a wide range of utilities directly within your code editor. Your data remains private and secure as all operations are performed locally on your machine without external data transmission.
 
+## How to Use
+
+1. **Open Command Palette:** Press `Cmd + Shift + P` (on macOS) or `Ctrl + Shift + P` (on Windows/Linux) to open the Command Palette.
+2. **Search and Select:** Type `Open Dev Utilities` and select it from the list to open the Dev Utilities interface.
+
 ## Key Features
 
 - **CSV to JSON Converter:**
