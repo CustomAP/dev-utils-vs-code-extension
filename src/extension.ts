@@ -4,7 +4,7 @@ export function activate(context: vscode.ExtensionContext) {
   let webview = vscode.commands.registerCommand("dev-utils.open", () => {
     let panel = vscode.window.createWebviewPanel(
       "webview",
-      "Dev Utils",
+      "Dev Utilities",
       vscode.ViewColumn.One,
       {
         enableScripts: true,

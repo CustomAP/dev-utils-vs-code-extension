@@ -26,7 +26,7 @@ const CardGrid = ({ vscode = null }: CardGridProps) => {
     <div>
       <div className="dev-utils-title">
         <img src={img} className="img-logo" alt="Logo" />
-        <H1>Dev Utils</H1>
+        <H1>Dev Utilities</H1>
       </div>
 
       <InputGroup

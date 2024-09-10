@@ -1,7 +1,7 @@
 {
-  "name": "dev-utils",
-  "displayName": "Dev Utils",
-  "description": "",
+  "name": "dev-utilities",
+  "displayName": "Dev Utilities",
+  "description": "A versatile VS Code extension with essential utilities for various development tasks",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.86.0"
@@ -9,13 +9,15 @@
   "categories": [
     "Other"
   ],
+  "publisher": "AshishPawar",
   "activationEvents": [],
   "main": "./out/extension.js",
+  "icon": "images/DevUtils_Transparent.png",
   "contributes": {
     "commands": [
       {
         "command": "dev-utils.open",
-        "title": "Open Dev Utils"
+        "title": "Open Dev Utilities"
       }
     ]
   },
