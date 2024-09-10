@@ -12,6 +12,8 @@ import UrlEncoder from "./utils/url_encoder/UrlEncoder";
 import UrlDecoder from "./utils/url_decoder/UrlDecoder";
 import TimestampToDate from "./utils/timestamp_to_date/TimestampToDate";
 import UrlParamsToJson from "./utils/url_params_to_json/UrlParamsToJson";
+import HexToRgb from "./utils/hex_to_rgb/HexToRgb";
+import RgbToHex from "./utils/rgb_to_hex/RgbToHex";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -64,6 +66,14 @@ const App = () => {
           <Route
             path="/util/url_params_to_json"
             element={<UrlParamsToJson vscode={vscode} />}
+          />
+          <Route
+            path="/util/hex_to_rgb"
+            element={<HexToRgb vscode={vscode} />}
+          />
+          <Route
+            path="/util/rgb_to_hex"
+            element={<RgbToHex vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

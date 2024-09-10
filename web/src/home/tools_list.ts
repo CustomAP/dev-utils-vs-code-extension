@@ -65,4 +65,16 @@ export const tools = [
     description:
       "Parse URL query parameters and convert them into a structured JSON object for easier data manipulation.",
   },
+  {
+    id: "hex_to_rgb",
+    name: "HEX to RGB",
+    description:
+      "Convert HEX color codes into RGB format for easier use in design and web development.",
+  },
+  {
+    id: "rgb_to_hex",
+    name: "RGB to HEX",
+    description:
+      "Transform RGB color values into HEX format for consistent color representation in CSS and design tools.",
+  },
 ];

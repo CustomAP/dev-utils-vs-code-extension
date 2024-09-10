@@ -42,6 +42,12 @@
 - **URL Query Parameters to JSON Converter:**
   Parse URL query parameters and convert them into a structured JSON object for easier data manipulation in your code.
 
+- **HEX to RGB Converter:**
+  Convert HEX color codes into RGB format for easier use in design and web development.
+
+- **RGB to HEX Converter:**
+  Transform RGB color values into HEX format for consistent color representation in CSS and design tools.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.
