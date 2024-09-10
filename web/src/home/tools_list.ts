@@ -34,4 +34,14 @@ export const tools = [
     name: "JSON to YAML",
     description: "Convert JSON to YAML",
   },
+  {
+    id: "url_encoder",
+    name: "URL Encoder",
+    description: "Encode URL",
+  },
+  {
+    id: "url_decoder",
+    name: "URL Decoder",
+    description: "Decode URL",
+  },
 ];
