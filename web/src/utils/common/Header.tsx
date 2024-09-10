@@ -21,8 +21,8 @@ const Header: React.FC<HeaderProps> = ({ title, onBack }) => {
 
   return (
     <div>
-      <Button className="back-button" onClick={handleBack}>
-        Back
+      <Button icon="home" className="back-button" onClick={handleBack}>
+        Home
       </Button>
       <H3>{title}</H3>
     </div>

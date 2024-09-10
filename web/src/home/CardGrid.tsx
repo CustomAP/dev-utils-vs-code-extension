@@ -3,6 +3,7 @@ import { Card, Elevation, InputGroup, H1, H5, Button } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import "./CardGrid.css";
 import { tools } from "./tools_list";
+import img from "../../public/DevUtils_Transparent.png";
 
 interface CardGridProps {
   vscode: any;
@@ -15,13 +16,16 @@ const CardGrid = ({ vscode = null }: CardGridProps) => {
     navigate(`/util/${id}`);
   };
 
-  const filteredTools = tools.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredTools = tools.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div>
       <div className="dev-utils-title">
+        <img src={img} className="img-logo" alt="Logo" />
         <H1>Dev Utils</H1>
       </div>
 
