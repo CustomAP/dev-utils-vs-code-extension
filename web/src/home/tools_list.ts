@@ -44,4 +44,9 @@ export const tools = [
     name: "URL Decoder",
     description: "Decode URL",
   },
+  {
+    id: "timestamp_to_date",
+    name: "Unix Timestamp to Date",
+    description: "Convert Unix Timestamp to Date",
+  },
 ];
