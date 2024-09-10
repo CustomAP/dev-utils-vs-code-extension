@@ -34,7 +34,7 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({ initialJson = "" }) => {
   };
 
   return (
-    <div>
+    <div className="holder">
       <Header title="JSON Prettier" />
       <Card className="input-card">
         <H4>JSON Input</H4>

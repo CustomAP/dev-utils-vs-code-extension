@@ -42,7 +42,7 @@ const CsvToJson: React.FC<CsvToJsonProps> = ({ initialCsv = "" }) => {
   };
 
   return (
-    <div>
+    <div className="holder">
       <Header title="CSV to JSON Converter" />
       <Card className="input-card">
         <H4>CSV Input</H4>
