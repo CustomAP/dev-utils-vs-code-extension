@@ -6,6 +6,8 @@ import CsvToJson from "./utils/csv_to_json/CsvToJson";
 import JsonPrettier from "./utils/json_prettier/JsonPrettier";
 import Base64Encoder from "./utils/base64encoder/Base64Encoder";
 import Base64Decoder from "./utils/base64decoder/Base64Decoder";
+import YamlToJson from "./utils/yaml_to_json/YamlToJson";
+import JsonToYaml from "./utils/json_to_yaml/JsonToYaml";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -34,6 +36,14 @@ const App = () => {
           <Route
             path="/util/base64_decoder"
             element={<Base64Decoder vscode={vscode} />}
+          />
+          <Route
+            path="/util/yaml_to_json"
+            element={<YamlToJson vscode={vscode} />}
+          />
+          <Route
+            path="/util/json_to_yaml"
+            element={<JsonToYaml vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

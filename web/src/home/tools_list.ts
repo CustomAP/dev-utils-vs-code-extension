@@ -24,4 +24,14 @@ export const tools = [
     name: "Base 64 Decoder",
     description: "Decode a Base 64 String",
   },
+  {
+    id: "yaml_to_json",
+    name: "YAML to JSON",
+    description: "Convert YAML to JSON",
+  },
+  {
+    id: "json_to_yaml",
+    name: "JSON to YAML",
+    description: "Convert JSON to YAML",
+  },
 ];
