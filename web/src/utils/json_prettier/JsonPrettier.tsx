@@ -6,9 +6,13 @@ import CopyButton from "../common/CopyButton";
 
 interface JsonPrettierProps {
   initialJson?: string;
+  vscode: any;
 }
 
-const JsonPrettier: React.FC<JsonPrettierProps> = ({ initialJson = "" }) => {
+const JsonPrettier: React.FC<JsonPrettierProps> = ({
+  initialJson = "",
+  vscode = null,
+}) => {
   const [jsonText, setJsonText] = useState<string>(initialJson);
   const [prettyJson, setPrettyJson] = useState<string>("");
 
@@ -54,7 +58,7 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({ initialJson = "" }) => {
           >
             Clear Input
           </Button>
-          <CopyButton text={prettyJson} label="Copy Result" />
+          <CopyButton vscode={vscode} text={prettyJson} label="Copy Result" />
         </div>
 
         <H4>Pretty JSON Output</H4>

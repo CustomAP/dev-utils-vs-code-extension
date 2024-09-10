@@ -4,11 +4,10 @@ import "./CopyButton.css";
 interface CopyButtonProps {
   text: string;
   label: string;
+  vscode: any;
 }
 
-const vscode = (window as any).acquireVsCodeApi();
-
-const handleCopy = (text: string) => {
+const handleCopy = (text: string, vscode: any) => {
   navigator.clipboard
     .writeText(text)
     .then(() => {
@@ -19,12 +18,16 @@ const handleCopy = (text: string) => {
     });
 };
 
-const CopyButton: React.FC<CopyButtonProps> = ({ text = "", label = "" }) => {
+const CopyButton: React.FC<CopyButtonProps> = ({
+  text = "",
+  label = "",
+  vscode = null,
+}) => {
   return (
     <Button
       className="copy-button"
       intent="success"
-      onClick={() => handleCopy(text)}
+      onClick={() => handleCopy(text, vscode)}
     >
       {label}
     </Button>

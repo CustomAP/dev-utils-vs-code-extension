@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Card, Elevation, InputGroup, H2 } from "@blueprintjs/core";
+import { Card, Elevation, InputGroup, H2, H5, Button } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import "./CardGrid.css";
 import { tools } from "./tools_list";
 
-const CardGrid = () => {
+interface CardGridProps {
+  vscode: any;
+}
+const CardGrid = ({ vscode = null }: CardGridProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
@@ -43,6 +46,38 @@ const CardGrid = () => {
             <p>{item.description}</p>
           </Card>
         ))}
+      </div>
+
+      <div className="contribute-holder">
+        <H5>Don't find what you are looking for?</H5>
+        <div>
+          <Button
+            className="contribute-button"
+            intent="success"
+            icon="git-merge"
+            onClick={() =>
+              vscode.postMessage({
+                type: "openLink",
+                url: "https://github.com/CustomAP/dev-utils-vs-code-extension",
+              })
+            }
+          >
+            Contribute
+          </Button>
+          <Button
+            className="contribute-button"
+            intent="success"
+            icon="git-branch"
+            onClick={() =>
+              vscode.postMessage({
+                type: "openLink",
+                url: "https://github.com/CustomAP/dev-utils-vs-code-extension/issues/new",
+              })
+            }
+          >
+            Submit a feature request
+          </Button>
+        </div>
       </div>
     </div>
   );

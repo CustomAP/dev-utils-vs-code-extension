@@ -4,7 +4,7 @@ export function activate(context: vscode.ExtensionContext) {
   let webview = vscode.commands.registerCommand("dev-utils.open", () => {
     let panel = vscode.window.createWebviewPanel(
       "webview",
-      "React",
+      "Dev Utils",
       vscode.ViewColumn.One,
       {
         enableScripts: true,
@@ -38,6 +38,10 @@ export function activate(context: vscode.ExtensionContext) {
         switch (message.type) {
           case "copy":
             vscode.window.showInformationMessage("Copied to clipboard!");
+            break;
+          case "openLink":
+            const url = vscode.Uri.parse(message.url);
+            vscode.env.openExternal(url);
             break;
         }
       },

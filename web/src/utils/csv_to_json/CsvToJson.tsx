@@ -7,9 +7,13 @@ import CopyButton from "../common/CopyButton";
 
 interface CsvToJsonProps {
   initialCsv?: string;
+  vscode: any;
 }
 
-const CsvToJson: React.FC<CsvToJsonProps> = ({ initialCsv = "" }) => {
+const CsvToJson: React.FC<CsvToJsonProps> = ({
+  initialCsv = "",
+  vscode = null,
+}) => {
   const [csvText, setCsvText] = useState<string>(initialCsv);
   const [jsonText, setJsonText] = useState<string>("");
 
@@ -62,7 +66,7 @@ const CsvToJson: React.FC<CsvToJsonProps> = ({ initialCsv = "" }) => {
           >
             Clear Input
           </Button>
-          <CopyButton text={jsonText} label="Copy Result" />
+          <CopyButton vscode={vscode} text={jsonText} label="Copy Result" />
         </div>
 
         <H4>JSON Output</H4>
