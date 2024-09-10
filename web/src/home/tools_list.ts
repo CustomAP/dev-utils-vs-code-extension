@@ -49,4 +49,9 @@ export const tools = [
     name: "Unix Timestamp to Date",
     description: "Convert Unix Timestamp to Date",
   },
+  {
+    id: "url_params_to_json",
+    name: "URL Query parameters to JSON",
+    description: "Convert URL Query parameters to JSON",
+  },
 ];

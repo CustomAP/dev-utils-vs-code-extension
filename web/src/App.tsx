@@ -11,6 +11,7 @@ import JsonToYaml from "./utils/json_to_yaml/JsonToYaml";
 import UrlEncoder from "./utils/url_encoder/UrlEncoder";
 import UrlDecoder from "./utils/url_decoder/UrlDecoder";
 import TimestampToDate from "./utils/timestamp_to_date/TimestampToDate";
+import UrlParamsToJson from "./utils/url_params_to_json/UrlParamsToJson";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -59,6 +60,10 @@ const App = () => {
           <Route
             path="/util/timestamp_to_date"
             element={<TimestampToDate vscode={vscode} />}
+          />
+          <Route
+            path="/util/url_params_to_json"
+            element={<UrlParamsToJson vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>
