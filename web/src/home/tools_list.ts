@@ -95,4 +95,10 @@ export const tools = [
     description:
       "Test and validate regular expressions against sample text to ensure your patterns match correctly, helping you refine and debug your regex queries efficiently.",
   },
+  {
+    id: "lorem_ipsum_generator",
+    name: "Lorem Ipsum Generator",
+    description:
+      "Generate placeholder text using Lorem Ipsum, perfect for filling in content during design and development stages to visualize layout and typography.",
+  },
 ];
