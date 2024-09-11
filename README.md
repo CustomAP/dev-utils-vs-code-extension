@@ -18,10 +18,10 @@
 - **JSON Prettifier:**
   Format and beautify JSON objects for better readability and easier debugging with proper indentation.
 
-- **Base64 Encoder:**
+- **Base 64 Encoder:**
   Encode any string or binary data into Base64 format, commonly used for data storage, transmission, and APIs.
 
-- **Base64 Decoder:**
+- **Base 64 Decoder:**
   Decode Base64-encoded strings back into their original format for viewing, editing, or further processing.
 
 - **YAML to JSON Converter:**
@@ -47,6 +47,12 @@
 
 - **RGB to HEX Converter:**
   Transform RGB color values into HEX format for consistent color representation in CSS and design tools.
+
+- **Image to Base 64 Converter:**
+  Convert images into Base64 encoded strings, making it easier to embed images directly into HTML, CSS, or JSON files without needing external links.
+
+- **Base 64 to Image Converter:**
+  Decode Base64 encoded strings back into image files, enabling easy retrieval and usage of embedded images in your projects.
 
 ## Why Use Dev Utilities?
 

@@ -19,13 +19,13 @@ export const tools = [
   },
   {
     id: "base64_encoder",
-    name: "Base64 Encoder",
+    name: "Base 64 Encoder",
     description:
       "Encode any string or binary data into a Base64 format, commonly used for data transmission and storage.",
   },
   {
     id: "base64_decoder",
-    name: "Base64 Decoder",
+    name: "Base 64 Decoder",
     description:
       "Decode Base64-encoded strings back to their original format, suitable for viewing or further processing.",
   },
@@ -76,5 +76,17 @@ export const tools = [
     name: "RGB to HEX",
     description:
       "Transform RGB color values into HEX format for consistent color representation in CSS and design tools.",
+  },
+  {
+    id: "image_to_base64",
+    name: "Image to Base 64",
+    description:
+      "Convert images into Base64 encoded strings, making it easier to embed images directly into HTML, CSS, or JSON files without needing external links.",
+  },
+  {
+    id: "base64_to_image",
+    name: "Base 64 to Image",
+    description:
+      "Decode Base64 encoded strings back into image files, enabling easy retrieval and usage of embedded images in your projects.",
   },
 ];

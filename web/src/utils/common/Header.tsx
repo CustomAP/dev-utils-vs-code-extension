@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ title, onBack }) => {
     if (onBack) {
       onBack(); // Call custom handler if provided
     } else {
-      navigate(-1); // Default action: go to the previous page
+      navigate("/"); // Default action: go to the previous page
     }
   };
 
