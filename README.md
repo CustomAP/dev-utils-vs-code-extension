@@ -54,6 +54,9 @@
 - **Base 64 to Image Converter:**
   Decode Base64 encoded strings back into image files, enabling easy retrieval and usage of embedded images in your projects.
 
+- **Regex Tester:**
+  Test and validate regular expressions against sample text to ensure your patterns match correctly, helping you refine and debug your regex queries efficiently.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.

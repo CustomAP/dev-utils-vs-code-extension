@@ -16,6 +16,7 @@ import HexToRgb from "./utils/hex_to_rgb/HexToRgb";
 import RgbToHex from "./utils/rgb_to_hex/RgbToHex";
 import ImageToBase64 from "./utils/image_to_base64/ImageToBase64";
 import Base64ToImage from "./utils/base64_to_image/Base64ToImage";
+import RegexTester from "./utils/regex_tester/RegexTester";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -84,6 +85,10 @@ const App = () => {
           <Route
             path="/util/base64_to_image"
             element={<Base64ToImage vscode={vscode} />}
+          />
+          <Route
+            path="/util/regex_tester"
+            element={<RegexTester vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>
