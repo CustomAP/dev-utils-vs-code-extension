@@ -53,16 +53,6 @@ const HexToRgb: React.FC<HexToRgbProps> = ({
     setBlue("");
   };
 
-  const colorPreviewStyle = {
-    backgroundColor: inputText ? `#${inputText.replace(/^#/, "")}` : "#ffffff",
-    width: "40px",
-    height: "40px",
-    borderRadius: "4px",
-    border: "1px solid #ccc",
-    display: "inline-block",
-    marginLeft: "10px",
-  };
-
   return (
     <div className="holder">
       <Header title="Hex to RGB Converter" />
@@ -77,7 +67,14 @@ const HexToRgb: React.FC<HexToRgbProps> = ({
             onChange={handleInputChange}
             placeholder="Enter hex color code..."
           />
-          <div style={colorPreviewStyle}></div>
+          <div
+            className="color-preview"
+            style={{
+              backgroundColor: inputText
+                ? `#${inputText.replace(/^#/, "")}`
+                : "#ffffff",
+            }}
+          ></div>
         </div>
         <div>
           <Button
