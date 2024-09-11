@@ -101,4 +101,10 @@ export const tools = [
     description:
       "Generate placeholder text using Lorem Ipsum, perfect for filling in content during design and development stages to visualize layout and typography.",
   },
+  {
+    id: "diff_checker",
+    name: "Diff Checker",
+    description:
+      "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
+  },
 ];

@@ -1,0 +1,21 @@
+.input-card {
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.holder {
+  margin: 20px;
+}
+
+.clear-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.diff-output {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  white-space: pre-wrap; /* Preserve line breaks and spaces */
+  font-family: monospace; /* Monospace font for better alignment */
+}

@@ -60,6 +60,9 @@
 - **Lorem Ipsum Generator:**
   Generate placeholder text using Lorem Ipsum, perfect for filling in content during design and development stages to visualize layout and typography.
 
+- **Diff Checker:**
+  Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.

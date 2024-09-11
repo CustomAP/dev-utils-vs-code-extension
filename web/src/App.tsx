@@ -18,6 +18,7 @@ import ImageToBase64 from "./utils/image_to_base64/ImageToBase64";
 import Base64ToImage from "./utils/base64_to_image/Base64ToImage";
 import RegexTester from "./utils/regex_tester/RegexTester";
 import LoremIpsumGenerator from "./utils/lorem_ipsum_generator/LoremIpsumGenerator";
+import DiffChecker from "./utils/diff_checker/DiffChecker";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -94,6 +95,10 @@ const App = () => {
           <Route
             path="/util/lorem_ipsum_generator"
             element={<LoremIpsumGenerator vscode={vscode} />}
+          />
+          <Route
+            path="/util/diff_checker"
+            element={<DiffChecker vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>
