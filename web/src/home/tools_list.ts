@@ -111,12 +111,18 @@ export const tools = [
     id: "backslash_escaper_unescaper",
     name: "Backslash Escaper / Unescaper",
     description:
-      "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
+      "Escape or unescape backslashes in text or code, ensuring proper formatting and handling of special characters in strings.",
   },
   {
     id: "json_escaper_unescaper",
     name: "JSON Escaper / Unescaper",
     description:
-      "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
+      "Escape or unescape special characters in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.",
+  },
+  {
+    id: "string_case_converter",
+    name: "String Case Converter",
+    description:
+      "Convert strings between different case formats, such as camelCase, snake_case, PascalCase, etc. for easier manipulation and consistency in your code.",
   },
 ];

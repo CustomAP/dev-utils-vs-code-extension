@@ -63,6 +63,15 @@
 - **Diff Checker:**
   Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.
 
+- **Backslash Escaper / Unescaper:**
+  Escape or unescape backslashes in text or code, ensuring proper formatting and handling of special characters in strings.
+
+- **JSON Escaper / Unescaper:**
+  Escape or unescape special characters in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.
+
+- **String Case Converter:**
+  Convert strings between different case formats, such as camelCase, snake_case, PascalCase, etc. for easier manipulation and consistency in your code.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.
