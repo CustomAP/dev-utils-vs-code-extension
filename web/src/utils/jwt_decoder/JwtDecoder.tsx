@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
-import { jwtDecode } from "jwt-decode";
+import jwt_decode, { jwtDecode } from "jwt-decode";
 import "./JwtDecoder.css";
 import Header from "../common/Header";
 import CopyButton from "../common/CopyButton";
@@ -15,14 +15,19 @@ const JwtDecoder: React.FC<JwtDecoderProps> = ({
   vscode = null,
 }) => {
   const [jwtText, setJwtText] = useState<string>(initialJwt);
-  const [decodedText, setDecodedText] = useState<string>("");
+  const [decodedHeader, setDecodedHeader] = useState<string>("");
+  const [decodedPayload, setDecodedPayload] = useState<string>("");
 
   const decodeJwt = (jwtStr: string) => {
     try {
-      const decodedJwt = jwtDecode(jwtStr);
-      setDecodedText(JSON.stringify(decodedJwt, null, 2));
+      const header = jwtDecode(jwtStr, { header: true });
+      setDecodedHeader(JSON.stringify(header, null, 2));
+
+      const decodedPayload = jwtDecode(jwtStr);
+      setDecodedPayload(JSON.stringify(decodedPayload, null, 2));
     } catch (e) {
-      setDecodedText("Invalid JWT format");
+      setDecodedHeader("Invalid JWT format");
+      setDecodedPayload("Invalid JWT format");
     }
   };
 
@@ -34,7 +39,8 @@ const JwtDecoder: React.FC<JwtDecoderProps> = ({
 
   const handleClear = () => {
     setJwtText("");
-    setDecodedText("");
+    setDecodedHeader("");
+    setDecodedPayload("");
   };
 
   return (
@@ -58,16 +64,29 @@ const JwtDecoder: React.FC<JwtDecoderProps> = ({
           >
             Clear Input
           </Button>
-          <CopyButton vscode={vscode} text={decodedText} label="Copy Result" />
+          <CopyButton
+            vscode={vscode}
+            text={decodedPayload}
+            label="Copy Result"
+          />
         </div>
 
-        <H4>Decoded Output</H4>
+        <H4>Decoded Header</H4>
         <TextArea
           autoResize={true}
           fill={true}
           large={true}
           readOnly={true}
-          value={decodedText}
+          value={decodedHeader}
+        />
+
+        <H4>Decoded Payload</H4>
+        <TextArea
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={decodedPayload}
         />
       </Card>
     </div>
