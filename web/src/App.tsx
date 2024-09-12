@@ -23,6 +23,7 @@ import BackslashEscaperUnescaper from "./utils/backslash_escaper_unescaper/Backs
 import JsonEscaperUnescaper from "./utils/json_escaper_unescaper/JsonEscaperUnescaper";
 import StringCaseConverter from "./utils/string_case_converter/StringCaseConverter";
 import HtmlStripper from "./utils/html_stripper/HtmlStripper";
+import JwtDecoder from "./utils/jwt_decoder/JwtDecoder";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -119,6 +120,10 @@ const App = () => {
           <Route
             path="/util/html_stripper"
             element={<HtmlStripper vscode={vscode} />}
+          />
+          <Route
+            path="/util/jwt_decoder"
+            element={<JwtDecoder vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

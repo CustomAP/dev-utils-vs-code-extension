@@ -131,4 +131,10 @@ export const tools = [
     description:
       "Remove HTML tags from text, leaving only the raw content, useful for extracting plain text from HTML documents or web pages.",
   },
+  {
+    id: "jwt_decoder",
+    name: "JWT Decoder",
+    description:
+      "Decode JSON Web Tokens (JWTs) to view their payload and header content in a readable format, helping you understand and debug token data.",
+  },
 ];

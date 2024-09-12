@@ -75,6 +75,9 @@
 - **HTML Stripper:**
   Remove HTML tags from text, leaving only the raw content, useful for extracting plain text from HTML documents or web pages.
 
+- **JWT Decoder:**
+  Decode JSON Web Tokens (JWTs) to view their payload and header content in a readable format, helping you understand and debug token data.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.
