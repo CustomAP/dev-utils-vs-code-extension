@@ -72,6 +72,9 @@
 - **String Case Converter:**
   Convert strings between different case formats, such as camelCase, snake_case, PascalCase, etc. for easier manipulation and consistency in your code.
 
+- **HTML Stripper:**
+  Remove HTML tags from text, leaving only the raw content, useful for extracting plain text from HTML documents or web pages.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.

@@ -125,4 +125,10 @@ export const tools = [
     description:
       "Convert strings between different case formats, such as camelCase, snake_case, PascalCase, etc. for easier manipulation and consistency in your code.",
   },
+  {
+    id: "html_stripper",
+    name: "HTML Stripper",
+    description:
+      "Remove HTML tags from text, leaving only the raw content, useful for extracting plain text from HTML documents or web pages.",
+  },
 ];

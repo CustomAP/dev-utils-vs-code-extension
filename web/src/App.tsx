@@ -22,6 +22,7 @@ import DiffChecker from "./utils/diff_checker/DiffChecker";
 import BackslashEscaperUnescaper from "./utils/backslash_escaper_unescaper/BackslashEscaperUnescaper";
 import JsonEscaperUnescaper from "./utils/json_escaper_unescaper/JsonEscaperUnescaper";
 import StringCaseConverter from "./utils/string_case_converter/StringCaseConverter";
+import HtmlStripper from "./utils/html_stripper/HtmlStripper";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -114,6 +115,10 @@ const App = () => {
           <Route
             path="/util/string_case_converter"
             element={<StringCaseConverter vscode={vscode} />}
+          />
+          <Route
+            path="/util/html_stripper"
+            element={<HtmlStripper vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>
