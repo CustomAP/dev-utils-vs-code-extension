@@ -107,4 +107,16 @@ export const tools = [
     description:
       "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
   },
+  {
+    id: "backslash_escaper_unescaper",
+    name: "Backslash Escaper / Unescaper",
+    description:
+      "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
+  },
+  {
+    id: "json_escaper_unescaper",
+    name: "JSON Escaper / Unescaper",
+    description:
+      "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
+  },
 ];

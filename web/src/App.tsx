@@ -19,6 +19,8 @@ import Base64ToImage from "./utils/base64_to_image/Base64ToImage";
 import RegexTester from "./utils/regex_tester/RegexTester";
 import LoremIpsumGenerator from "./utils/lorem_ipsum_generator/LoremIpsumGenerator";
 import DiffChecker from "./utils/diff_checker/DiffChecker";
+import BackslashEscaperUnescaper from "./utils/backslash_escaper_unescaper/BackslashEscaperUnescaper";
+import JsonEscaperUnescaper from "./utils/json_escaper_unescaper/JsonEscaperUnescaper";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -99,6 +101,14 @@ const App = () => {
           <Route
             path="/util/diff_checker"
             element={<DiffChecker vscode={vscode} />}
+          />
+          <Route
+            path="/util/backslash_escaper_unescaper"
+            element={<BackslashEscaperUnescaper vscode={vscode} />}
+          />
+          <Route
+            path="/util/json_escaper_unescaper"
+            element={<JsonEscaperUnescaper vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>
