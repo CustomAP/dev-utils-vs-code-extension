@@ -129,6 +129,36 @@ const RegexTester: React.FC<RegexTesterProps> = ({
           dangerouslySetInnerHTML={{ __html: result }}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the Regex Tester:</p>
+
+        <H4>Example Regex Pattern</H4>
+        <InputGroup
+          className="example-input"
+          value={`\\b\\d{3}-\\d{2}-\\d{4}\\b`}
+          readOnly={true}
+        />
+
+        <H4>Example Test String</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          value={`Here are some SSNs: 123-45-6789, 987-65-4321. The following is not a valid SSN: 123-456-7890.`}
+          readOnly={true}
+        />
+
+        <H4>Expected Result</H4>
+        <Callout className="example-callout">2 matches found</Callout>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `Here are some SSNs: <mark>123-45-6789</mark>, <mark>987-65-4321</mark>. The following is not a valid SSN: 123-456-7890.`,
+          }}
+        />
+      </Card>
     </div>
   );
 };
