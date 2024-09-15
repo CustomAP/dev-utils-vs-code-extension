@@ -70,6 +70,47 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({
           value={prettyJson}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the JSON Prettier:</p>
+
+        <H4>Example JSON Input</H4>
+        <TextArea
+          className="example-json"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`{
+      "name": "John Doe","age": 30,"email": "johndoe@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "Springfield",
+        "state": "IL"
+      }
+    }`}
+        />
+
+        <H4>Expected Pretty JSON Output</H4>
+        <TextArea
+          className="example-pretty-json"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`{
+  "name": "John Doe",
+  "age": 30,
+  "email": "johndoe@example.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL"
+  }
+}`}
+        />
+      </Card>
     </div>
   );
 };
