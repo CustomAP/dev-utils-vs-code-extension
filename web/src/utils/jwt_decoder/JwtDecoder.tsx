@@ -89,6 +89,48 @@ const JwtDecoder: React.FC<JwtDecoderProps> = ({
           value={decodedPayload}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Here's how the JWT Decoder works:</p>
+
+        <H4>Example JWT Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`}
+        />
+
+        <H4>Expected Decoded Header</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`{
+  "alg": "HS256",
+  "typ": "JWT"
+}`}
+        />
+
+        <H4>Expected Decoded Payload</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}`}
+        />
+      </Card>
     </div>
   );
 };

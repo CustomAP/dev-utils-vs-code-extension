@@ -115,9 +115,9 @@ export const tools = [
   },
   {
     id: "json_escaper_unescaper",
-    name: "JSON Escaper / Unescaper",
+    name: "JSON Quotes Escaper / Unescaper",
     description:
-      "Escape or unescape special characters in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.",
+      "Escape or unescape quotes in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.",
   },
   {
     id: "string_case_converter",

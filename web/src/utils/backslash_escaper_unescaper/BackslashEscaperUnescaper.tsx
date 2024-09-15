@@ -85,6 +85,44 @@ const BackslashEscaperUnescaper: React.FC<BackslashEscaperUnescaperProps> = ({
           value={unescapedText}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Here's how the Backslash Escaper/Unescaper works:</p>
+
+        <H4>Example Text Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`Example with a single backslash: \\
+Multi-line text with backslashes: \\\\`}
+        />
+
+        <H4>Expected Escaped Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`Example with a single backslash: \\\\
+Multi-line text with backslashes: \\\\\\\\`}
+        />
+
+        <H4>Expected Unescaped Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`Example with a single backslash: \\
+Multi-line text with backslashes: \\`}
+        />
+      </Card>
     </div>
   );
 };

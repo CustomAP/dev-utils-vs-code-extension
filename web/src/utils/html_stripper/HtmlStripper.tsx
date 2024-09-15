@@ -66,6 +66,31 @@ const HtmlStripper: React.FC<HtmlStripperProps> = ({
           value={plainText}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Here's how the HTML Stripper works:</p>
+
+        <H4>Example HTML Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`<html><h1>Hello, World!</h1>How's it going?</html>`}
+        />
+
+        <H4>Expected Plain Text Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`Hello, World!How's it going?`}
+        />
+      </Card>
     </div>
   );
 };
