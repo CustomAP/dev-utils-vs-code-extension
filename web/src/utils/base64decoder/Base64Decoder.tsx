@@ -36,6 +36,9 @@ const Base64Decoder: React.FC<Base64DecoderProps> = ({
     setDecodedText("");
   };
 
+  const exampleText = "Hello, World!";
+  const exampleBase64 = "SGVsbG8sIFdvcmxkIQ==";
+
   return (
     <div className="holder">
       <Header title="Base64 Decoder" />
@@ -67,6 +70,31 @@ const Base64Decoder: React.FC<Base64DecoderProps> = ({
           large={true}
           readOnly={true}
           value={decodedText}
+        />
+      </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the Base64 Encoder:</p>
+
+        <H4>Example Text Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={exampleBase64}
+        />
+
+        <H4>Expected Base64 Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={exampleText}
         />
       </Card>
     </div>
