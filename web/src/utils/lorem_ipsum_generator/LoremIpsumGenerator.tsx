@@ -258,6 +258,30 @@ const LoremIpsumGenerator: React.FC<LoremIpsumGeneratorProps> = ({
           </>
         )}
       </Card>
+
+      <Card className="example-card">
+        <H4>How to Use the Lorem Ipsum Generator</H4>
+        <p>To generate Lorem Ipsum text, follow these steps:</p>
+        <ol>
+          <li>
+            Select the type of content you need from the dropdown menu. Options
+            include paragraphs, sentences, words, titles, names, emails, URLs,
+            and tweets.
+          </li>
+          <li>
+            Click the "Generate" button to create the text based on your
+            selection.
+          </li>
+          <li>
+            The generated text will appear in the text area below. You can copy
+            it to your clipboard using the "Copy Text" button.
+          </li>
+          <li>
+            If you need a different type of content or want to start over, click
+            the "Clear" button to reset the generator.
+          </li>
+        </ol>
+      </Card>
     </div>
   );
 };

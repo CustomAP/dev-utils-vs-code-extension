@@ -3,7 +3,6 @@ import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
 import "react-diff-view/style/index.css";
 import "./DiffChecker.css";
 import Header from "../common/Header";
-import CopyButton from "../common/CopyButton";
 import ReactDiffViewer from "react-diff-viewer-continued";
 
 interface DiffCheckerProps {
@@ -67,6 +66,26 @@ const DiffChecker: React.FC<DiffCheckerProps> = ({
 
         <H4>Diff Output</H4>
         <ReactDiffViewer oldValue={text1} newValue={text2} splitView={true} />
+      </Card>
+
+      <Card className="example-card">
+        <H4>How to Use the Diff Checker</H4>
+        <p>
+          To compare two blocks of text and view their differences, follow these
+          steps:
+        </p>
+        <ol>
+          <li>Enter the first block of text in the "Text 1" area.</li>
+          <li>Enter the second block of text in the "Text 2" area.</li>
+          <li>
+            Click the "Clear Input" button if you want to reset both text areas.
+          </li>
+          <li>
+            The differences between the two texts will be displayed in the "Diff
+            Output" section below, highlighting additions, deletions, and
+            changes.
+          </li>
+        </ol>
       </Card>
     </div>
   );

@@ -19,3 +19,13 @@
   white-space: pre-wrap; /* Preserve line breaks and spaces */
   font-family: monospace; /* Monospace font for better alignment */
 }
+
+.example-card {
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.example-card {
+  background-color: #f7f7f7;
+  border-left: 5px solid #137cbd;
+}

@@ -219,6 +219,32 @@ const StringCaseConverter: React.FC<StringCaseConverterProps> = ({
           value={convertedText}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>How to Use the String Case Converter</H4>
+        <p>To convert text into different case formats, follow these steps:</p>
+        <ol>
+          <li>Enter the text you want to convert in the "Text Input" area.</li>
+          <li>
+            Select the desired case format from the dropdown menu. Available
+            formats include camelCase, snake_case, PascalCase, kebab-case,
+            SCREAM-KEBAB, CONSTANT_CASE, Title Case, Sentence case, dot.case,
+            path/case, lowercase, and UPPERCASE.
+          </li>
+          <li>
+            The text will be automatically converted to the selected format and
+            displayed in the "Converted Output" area.
+          </li>
+          <li>
+            If you want to reset the text and start over, click the "Clear
+            Input" button.
+          </li>
+          <li>
+            You can copy the converted text to your clipboard using the "Copy
+            Result" button.
+          </li>
+        </ol>
+      </Card>
     </div>
   );
 };

@@ -78,6 +78,21 @@ const Base64ToImage: React.FC<Base64ToImageProps> = ({ vscode = null }) => {
           placeholder="Paste Base64 string here..."
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>How to Use the Base64 to Image Converter</H4>
+        <p>
+          To convert a Base64-encoded string to an image, follow these steps:
+        </p>
+        <ol>
+          <li>Paste the Base64-encoded string into the input field.</li>
+          <li>
+            The image will automatically be displayed once the string is
+            processed.
+          </li>
+          <li>Click the "Download" button to save the image to your device.</li>
+        </ol>
+      </Card>
     </div>
   );
 };
