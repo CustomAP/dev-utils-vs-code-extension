@@ -4,6 +4,21 @@ All notable changes to the "react-ext" extension will be documented in this file
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.11]
+
+### Added
+
+- Example section
+- How to use guide
+- 3 Column Home page
+
+## [0.0.10]
+
+### Added
+
+- HTML Stripper
+- JWT Decoder
+
 ## [0.0.9]
 
 ### Added
