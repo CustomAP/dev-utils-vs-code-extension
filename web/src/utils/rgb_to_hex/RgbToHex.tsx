@@ -129,6 +129,21 @@ const RgbToHex: React.FC<RgbToHexProps> = ({
         <H4>Hex Output</H4>
         <InputGroup readOnly={true} value={hex} className="hex-field" />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the RGB to Hex Converter:</p>
+
+        <H4>Example RGB Input</H4>
+        <div className="example-input">
+          <InputGroup readOnly={true} value="Red: 255" className="rgb-field" />
+          <InputGroup readOnly={true} value="Green: 87" className="rgb-field" />
+          <InputGroup readOnly={true} value="Blue: 51" className="rgb-field" />
+        </div>
+
+        <H4>Expected Hex Output</H4>
+        <InputGroup readOnly={true} value="#FF5733" />
+      </Card>
     </div>
   );
 };
