@@ -70,6 +70,33 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           value={dateText}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>
+          Below is an example of how to use the Timestamp to Date Converter:
+        </p>
+
+        <H4>Example Timestamp Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="1694006400"
+        />
+
+        <H4>Expected Date Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="Wed, 06 Sep 2023 13:20:00 GMT"
+        />
+      </Card>
     </div>
   );
 };

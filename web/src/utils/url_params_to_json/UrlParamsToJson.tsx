@@ -73,6 +73,38 @@ const UrlParamsToJson: React.FC<UrlParamsToJsonProps> = ({
           value={jsonText}
         />
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>
+          Below is an example of how to use the URL Query Parameters to JSON
+          Converter:
+        </p>
+
+        <H4>Example Query Parameters Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="?name=JohnDoe&age=30&city=Boston"
+        />
+
+        <H4>Expected JSON Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={`{
+  "name": "JohnDoe",
+  "age": "30",
+  "city": "Boston"
+}`}
+        />
+      </Card>
     </div>
   );
 };

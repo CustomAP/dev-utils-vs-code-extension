@@ -110,6 +110,28 @@ const HexToRgb: React.FC<HexToRgbProps> = ({
           />
         </div>
       </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the Hex to RGB Converter:</p>
+
+        <H4>Example Hex Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="#FF5733"
+        />
+
+        <H4>Expected RGB Output</H4>
+        <div className="rgb-output">
+          <InputGroup readOnly={true} value="Red: 255" className="rgb-field" />
+          <InputGroup readOnly={true} value="Green: 87" className="rgb-field" />
+          <InputGroup readOnly={true} value="Blue: 51" className="rgb-field" />
+        </div>
+      </Card>
     </div>
   );
 };

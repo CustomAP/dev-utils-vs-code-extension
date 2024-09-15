@@ -30,11 +30,11 @@
 - **JSON to YAML Converter:**
   Transform JSON data into YAML format, perfect for configuration files that require better readability and compact structure.
 
-- **URL Encoder:**
-  Encode URLs by converting special characters into their percent-encoded equivalents, ensuring safe transmission in HTTP requests.
+- **URL Query Encoder:**
+  Encode URL queries by converting special characters into their percent-encoded equivalents, ensuring safe transmission in HTTP requests.
 
-- **URL Decoder:**
-  Decode percent-encoded URLs back to their human-readable form for easier analysis and reuse in projects.
+- **URL Query Decoder:**
+  Decode percent-encoded URL queries back to their human-readable form for easier analysis and reuse in projects.
 
 - **Unix Timestamp to Date Converter:**
   Quickly convert Unix timestamps into human-readable date formats, useful for working with time-based data.

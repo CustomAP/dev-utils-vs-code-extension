@@ -43,15 +43,15 @@ export const tools = [
   },
   {
     id: "url_encoder",
-    name: "URL Encoder",
+    name: "URL Query Encoder",
     description:
-      "Encode URLs by converting special characters into their percent-encoded representations for safe transmission.",
+      "Encode URL queries by converting special characters into their percent-encoded representations for safe transmission.",
   },
   {
     id: "url_decoder",
-    name: "URL Decoder",
+    name: "URL Query Decoder",
     description:
-      "Decode percent-encoded URLs back into their original, human-readable form for easier analysis or reuse.",
+      "Decode percent-encoded URL queries back into their original, human-readable form for easier analysis or reuse.",
   },
   {
     id: "timestamp_to_date",

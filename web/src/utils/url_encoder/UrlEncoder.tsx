@@ -38,7 +38,7 @@ const UrlEncoder: React.FC<UrlEncoderProps> = ({
 
   return (
     <div className="holder">
-      <Header title="URL Encoder" />
+      <Header title="URL Query Encoder" />
       <Card className="input-card">
         <H4>Text Input</H4>
         <TextArea
@@ -47,7 +47,7 @@ const UrlEncoder: React.FC<UrlEncoderProps> = ({
           large={true}
           value={inputText}
           onChange={handleInputChange}
-          placeholder="Enter text to encode..."
+          placeholder="Enter query to encode..."
         />
         <div>
           <Button
@@ -60,13 +60,38 @@ const UrlEncoder: React.FC<UrlEncoderProps> = ({
           <CopyButton vscode={vscode} text={encodedText} label="Copy Result" />
         </div>
 
-        <H4>Encoded URL Output</H4>
+        <H4>Encoded URL Query Output</H4>
         <TextArea
           autoResize={true}
           fill={true}
           large={true}
           readOnly={true}
           value={encodedText}
+        />
+      </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the URL Query Encoder:</p>
+
+        <H4>Example Text Input</H4>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="React Components & BlueprintJS"
+        />
+
+        <H4>Expected Encoded URL Query Output</H4>
+        <TextArea
+          className="example-output"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="React%20Components%20%26%20BlueprintJS"
         />
       </Card>
     </div>
