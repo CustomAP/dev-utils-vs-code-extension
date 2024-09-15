@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
-import jwt_decode, { jwtDecode } from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import "./JwtDecoder.css";
 import Header from "../common/Header";
 import CopyButton from "../common/CopyButton";
