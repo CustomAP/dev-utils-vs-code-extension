@@ -78,6 +78,9 @@
 - **JWT Decoder:**
   Decode JSON Web Tokens (JWTs) to view their payload and header content in a readable format, helping you understand and debug token data.
 
+- **HTML Prettier:**
+  Format and beautify HTML code with proper indentation and spacing, making it more readable and easier to maintain.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.

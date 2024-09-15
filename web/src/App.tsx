@@ -24,6 +24,7 @@ import JsonEscaperUnescaper from "./utils/json_escaper_unescaper/JsonEscaperUnes
 import StringCaseConverter from "./utils/string_case_converter/StringCaseConverter";
 import HtmlStripper from "./utils/html_stripper/HtmlStripper";
 import JwtDecoder from "./utils/jwt_decoder/JwtDecoder";
+import HtmlPrettier from "./utils/html_prettier/HtmlPrettier";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -124,6 +125,10 @@ const App = () => {
           <Route
             path="/util/jwt_decoder"
             element={<JwtDecoder vscode={vscode} />}
+          />
+          <Route
+            path="/util/html_prettier"
+            element={<HtmlPrettier vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

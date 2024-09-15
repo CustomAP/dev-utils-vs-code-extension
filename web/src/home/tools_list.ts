@@ -137,4 +137,10 @@ export const tools = [
     description:
       "Decode JSON Web Tokens (JWTs) to view their payload and header content in a readable format, helping you understand and debug token data.",
   },
+  {
+    id: "html_prettier",
+    name: "HTML Prettier",
+    description:
+      "Format and beautify HTML code with proper indentation and spacing, making it more readable and easier to maintain.",
+  },
 ];
