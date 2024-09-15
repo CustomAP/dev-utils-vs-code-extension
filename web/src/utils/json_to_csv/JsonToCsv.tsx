@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
+import { Button, TextArea, Card, H4, Divider } from "@blueprintjs/core";
 import Papa from "papaparse";
 import "./JsonToCsv.css";
 import Header from "../common/Header";
@@ -42,6 +42,15 @@ const JsonToCsv: React.FC<JsonToCsvProps> = ({
     setCsvText("");
   };
 
+  const exampleJson = `[
+    {"name": "John Doe", "age": 30, "email": "johndoe@example.com"},
+    {"name": "Jane Doe", "age": 28, "email": "janedoe@example.com"}
+]`;
+
+  const exampleCsv = `name,age,email
+John Doe,30,johndoe@example.com
+Jane Doe,28,janedoe@example.com`;
+
   return (
     <div className="holder">
       <Header title="JSON to CSV Converter" />
@@ -73,6 +82,30 @@ const JsonToCsv: React.FC<JsonToCsvProps> = ({
           large={true}
           readOnly={true}
           value={csvText}
+        />
+      </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the JSON to CSV converter:</p>
+        <H4>Example JSON Input</H4>
+        <TextArea
+          className="example-json"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={exampleJson}
+        />
+
+        <H4>Expected CSV Output</H4>
+        <TextArea
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={exampleCsv}
+          className="example-csv"
         />
       </Card>
     </div>

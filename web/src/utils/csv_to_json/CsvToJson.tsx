@@ -45,6 +45,23 @@ const CsvToJson: React.FC<CsvToJsonProps> = ({
     setJsonText("");
   };
 
+  const exampleCsv = `name,age,email
+John Doe,30,johndoe@example.com
+Jane Doe,28,janedoe@example.com`;
+
+  const exampleJson = `[
+    {
+      "name": "John Doe",
+      "age": "30",
+      "email": "johndoe@example.com"
+    },
+    {
+      "name": "Jane Doe",
+      "age": "28",
+      "email": "janedoe@example.com"
+    }
+]`;
+
   return (
     <div className="holder">
       <Header title="CSV to JSON Converter" />
@@ -76,6 +93,30 @@ const CsvToJson: React.FC<CsvToJsonProps> = ({
           large={true}
           readOnly={true}
           value={jsonText}
+        />
+      </Card>
+
+      <Card className="example-card">
+        <H4>Example Usage</H4>
+        <p>Below is an example of how to use the CSV to JSON converter:</p>
+        <H4>Example CSV Input</H4>
+        <TextArea
+          className="example-csv"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={exampleCsv}
+        />
+
+        <H4>Expected JSON Output</H4>
+        <TextArea
+          className="example-json"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value={exampleJson}
         />
       </Card>
     </div>
