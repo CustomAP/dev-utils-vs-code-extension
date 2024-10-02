@@ -70,9 +70,10 @@ const HexToRgb: React.FC<HexToRgbProps> = ({
           <div
             className="color-preview"
             style={{
-              backgroundColor: inputText
-                ? `#${inputText.replace(/^#/, "")}`
-                : "#ffffff",
+              backgroundColor:
+                inputText && inputText.replace(/^#/, "").length === 6
+                  ? `#${inputText.replace(/^#/, "")}`
+                  : "#ffffff",
             }}
           ></div>
         </div>

@@ -41,15 +41,6 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({
     <div className="holder">
       <Header title="JSON Prettier" />
       <Card className="input-card">
-        <H4>JSON Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={jsonText}
-          onChange={handleInputChange}
-          placeholder="Paste JSON here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -60,29 +51,47 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({
           </Button>
           <CopyButton vscode={vscode} text={prettyJson} label="Copy Result" />
         </div>
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>JSON Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={jsonText}
+              onChange={handleInputChange}
+              placeholder="Paste JSON here..."
+            />
+          </div>
 
-        <H4>Pretty JSON Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={prettyJson}
-        />
+          <div className="text-input">
+            <H4>Pretty JSON Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={prettyJson}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Below is an example of how to use the JSON Prettier:</p>
 
-        <H4>Example JSON Input</H4>
-        <TextArea
-          className="example-json"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`{
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example JSON Input</H4>
+            <TextArea
+              className="example-json"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`{
       "name": "John Doe","age": 30,"email": "johndoe@example.com",
       "address": {
         "street": "123 Main St",
@@ -90,16 +99,18 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({
         "state": "IL"
       }
     }`}
-        />
+            />
+          </div>
 
-        <H4>Expected Pretty JSON Output</H4>
-        <TextArea
-          className="example-pretty-json"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`{
+          <div className="text-input">
+            <H4>Expected Pretty JSON Output</H4>
+            <TextArea
+              className="example-pretty-json"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`{
   "name": "John Doe",
   "age": 30,
   "email": "johndoe@example.com",
@@ -109,7 +120,9 @@ const JsonPrettier: React.FC<JsonPrettierProps> = ({
     "state": "IL"
   }
 }`}
-        />
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

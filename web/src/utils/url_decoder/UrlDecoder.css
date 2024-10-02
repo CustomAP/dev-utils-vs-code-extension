@@ -29,3 +29,16 @@
 .example-output {
   background-color: #eaeaea;
 }
+
+.text-inputs {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.text-input {
+  flex: 1;
+}

@@ -41,15 +41,6 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
     <div className="holder">
       <Header title="Timestamp to Date Converter" />
       <Card className="input-card">
-        <H4>Timestamp Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={timestampText}
-          onChange={handleInputChange}
-          placeholder="Enter Unix timestamp here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -61,14 +52,31 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           <CopyButton vscode={vscode} text={dateText} label="Copy Result" />
         </div>
 
-        <H4>Date Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={dateText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Timestamp Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={timestampText}
+              onChange={handleInputChange}
+              placeholder="Enter Unix timestamp here..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Date Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={dateText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
@@ -77,25 +85,31 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           Below is an example of how to use the Timestamp to Date Converter:
         </p>
 
-        <H4>Example Timestamp Input</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value="1694006400"
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example Timestamp Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value="1694006400"
+            />
+          </div>
 
-        <H4>Expected Date Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value="Wed, 06 Sep 2023 13:20:00 GMT"
-        />
+          <div className="text-input">
+            <H4>Expected Date Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value="Wed, 06 Sep 2023 13:20:00 GMT"
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

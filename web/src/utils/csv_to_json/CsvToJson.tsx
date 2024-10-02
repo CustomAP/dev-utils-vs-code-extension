@@ -66,15 +66,6 @@ Jane Doe,28,janedoe@example.com`;
     <div className="holder">
       <Header title="CSV to JSON Converter" />
       <Card className="input-card">
-        <H4>CSV Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={csvText}
-          onChange={handleInputChange}
-          placeholder="Paste CSV data here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -86,38 +77,62 @@ Jane Doe,28,janedoe@example.com`;
           <CopyButton vscode={vscode} text={jsonText} label="Copy Result" />
         </div>
 
-        <H4>JSON Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={jsonText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>CSV Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={csvText}
+              onChange={handleInputChange}
+              placeholder="Paste CSV data here..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>JSON Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={jsonText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Below is an example of how to use the CSV to JSON converter:</p>
-        <H4>Example CSV Input</H4>
-        <TextArea
-          className="example-csv"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={exampleCsv}
-        />
 
-        <H4>Expected JSON Output</H4>
-        <TextArea
-          className="example-json"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={exampleJson}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example CSV Input</H4>
+            <TextArea
+              className="example-csv"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={exampleCsv}
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Expected JSON Output</H4>
+            <TextArea
+              className="example-json"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={exampleJson}
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

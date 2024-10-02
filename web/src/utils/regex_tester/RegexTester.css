@@ -36,3 +36,15 @@
 .example-callout {
   margin-bottom: 10px;
 }
+
+.text-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.text-input {
+  flex: 1;
+}

@@ -98,16 +98,45 @@ const RegexTester: React.FC<RegexTesterProps> = ({
           placeholder="Enter regex pattern here..."
         />
 
-        <H4>Test String</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={testString}
-          onChange={handleTextChange}
-          placeholder="Enter test string here..."
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Test String</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={testString}
+              onChange={handleTextChange}
+              placeholder="Enter test string here..."
+            />
+          </div>
 
+          <div className="text-input">
+            <H4>Result</H4>
+            {result != null && result !== "" ? (
+              <div
+                className="regex-result"
+                dangerouslySetInnerHTML={{ __html: result }}
+              />
+            ) : (
+              <TextArea
+                autoResize={true}
+                fill={true}
+                large={true}
+                readOnly={true}
+                value={result}
+                onChange={handleTextChange}
+                placeholder="Result will be displayed here..."
+              />
+            )}
+          </div>
+        </div>
+
+        {matchCount !== null && (
+          <Callout>
+            {matchCount} {matchCount === 1 ? "match" : "matches"} found
+          </Callout>
+        )}
         <div>
           <Button
             className="clear-button"
@@ -117,17 +146,6 @@ const RegexTester: React.FC<RegexTesterProps> = ({
             Clear
           </Button>
         </div>
-
-        <H4>Result</H4>
-        {matchCount !== null && (
-          <Callout>
-            {matchCount} {matchCount === 1 ? "match" : "matches"} found
-          </Callout>
-        )}
-        <div
-          className="regex-result"
-          dangerouslySetInnerHTML={{ __html: result }}
-        />
       </Card>
 
       <Card className="example-card">

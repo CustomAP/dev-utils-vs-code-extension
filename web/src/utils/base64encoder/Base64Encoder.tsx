@@ -43,15 +43,6 @@ const Base64Encoder: React.FC<Base64EncoderProps> = ({
     <div className="holder">
       <Header title="Base64 Encoder" />
       <Card className="input-card">
-        <H4>Text Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={inputText}
-          onChange={handleInputChange}
-          placeholder="Enter text to encode..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -63,39 +54,61 @@ const Base64Encoder: React.FC<Base64EncoderProps> = ({
           <CopyButton vscode={vscode} text={encodedText} label="Copy Result" />
         </div>
 
-        <H4>Base64 Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={encodedText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Text Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={inputText}
+              onChange={handleInputChange}
+              placeholder="Enter text to encode..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Base64 Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={encodedText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Below is an example of how to use the Base64 Encoder:</p>
 
-        <H4>Example Text Input</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={exampleText}
-        />
-
-        <H4>Expected Base64 Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={exampleBase64}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example Text Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={exampleText}
+            />
+          </div>
+          <div className="text-input">
+            <H4>Expected Base64 Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={exampleBase64}
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

@@ -44,15 +44,6 @@ const UrlParamsToJson: React.FC<UrlParamsToJsonProps> = ({
     <div className="holder">
       <Header title="URL Query Parameters to JSON Converter" />
       <Card className="input-card">
-        <H4>URL Query Parameters Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={urlParamsText}
-          onChange={handleInputChange}
-          placeholder="Enter URL query parameters here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -64,14 +55,31 @@ const UrlParamsToJson: React.FC<UrlParamsToJsonProps> = ({
           <CopyButton vscode={vscode} text={jsonText} label="Copy Result" />
         </div>
 
-        <H4>JSON Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={jsonText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>URL Query Parameters Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={urlParamsText}
+              onChange={handleInputChange}
+              placeholder="Enter URL query parameters here..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>JSON Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={jsonText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
@@ -81,29 +89,35 @@ const UrlParamsToJson: React.FC<UrlParamsToJsonProps> = ({
           Converter:
         </p>
 
-        <H4>Example Query Parameters Input</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value="?name=JohnDoe&age=30&city=Boston"
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example Query Parameters Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value="?name=JohnDoe&age=30&city=Boston"
+            />
+          </div>
 
-        <H4>Expected JSON Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`{
+          <div className="text-input">
+            <H4>Expected JSON Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`{
   "name": "JohnDoe",
   "age": "30",
   "city": "Boston"
 }`}
-        />
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

@@ -40,15 +40,6 @@ const UrlEncoder: React.FC<UrlEncoderProps> = ({
     <div className="holder">
       <Header title="URL Query Encoder" />
       <Card className="input-card">
-        <H4>Text Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={inputText}
-          onChange={handleInputChange}
-          placeholder="Enter query to encode..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -60,39 +51,80 @@ const UrlEncoder: React.FC<UrlEncoderProps> = ({
           <CopyButton vscode={vscode} text={encodedText} label="Copy Result" />
         </div>
 
-        <H4>Encoded URL Query Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={encodedText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>URL Query Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={inputText}
+              onChange={handleInputChange}
+              placeholder="Enter query part of the URL to encode..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Encoded URL Query Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={encodedText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
-        <p>Below is an example of how to use the URL Query Encoder:</p>
+        <p>
+          Below is an example of how to use the URL Query Encoder. Copy paste
+          the <b>Query part of the URL</b> and the utility does the rest:
+        </p>
 
-        <H4>Example Text Input</H4>
+        <H4>Example URL</H4>
         <TextArea
           className="example-input"
           autoResize={true}
           fill={true}
           large={true}
           readOnly={true}
-          value="React Components & BlueprintJS"
+          value="www.example.com/React Components & BlueprintJS"
         />
 
-        <H4>Expected Encoded URL Query Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value="React%20Components%20%26%20BlueprintJS"
-        />
+        <p>
+          Below is an example of how to use the URL Query Encoder. Copy paste
+          the <b>Query part of the URL</b> and the utility does the rest:
+        </p>
+
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example URL Query Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value="React Components & BlueprintJS"
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Expected Encoded URL Query Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value="React%20Components%20%26%20BlueprintJS"
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

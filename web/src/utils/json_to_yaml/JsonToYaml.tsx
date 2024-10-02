@@ -42,15 +42,6 @@ const JsonToYaml: React.FC<JsonToYamlProps> = ({
     <div className="holder">
       <Header title="JSON to YAML Converter" />
       <Card className="input-card">
-        <H4>JSON Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={jsonText}
-          onChange={handleInputChange}
-          placeholder="Paste JSON data here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -62,43 +53,65 @@ const JsonToYaml: React.FC<JsonToYamlProps> = ({
           <CopyButton vscode={vscode} text={yamlText} label="Copy Result" />
         </div>
 
-        <H4>YAML Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={yamlText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>JSON Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={jsonText}
+              onChange={handleInputChange}
+              placeholder="Paste JSON data here..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>YAML Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={yamlText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Below is an example of how to use the JSON to YAML Converter:</p>
 
-        <H4>Example JSON Input</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`{
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example JSON Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`{
   "name": "John Doe",
   "age": 30,
   "occupation": "Developer"
 }`}
-        />
-
-        <H4>Expected YAML Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`name: John Doe\nage: 30\noccupation: Developer`}
-        />
+            />
+          </div>
+          <div className="text-input">
+            <H4>Expected YAML Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`name: John Doe\nage: 30\noccupation: Developer`}
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );
