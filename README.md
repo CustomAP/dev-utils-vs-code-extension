@@ -63,8 +63,11 @@
 - **Diff Checker:**
   Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.
 
-- **Backslash Escaper / Unescaper:**
+- **Backslash Escaper:**
   Escape or unescape backslashes in text or code, ensuring proper formatting and handling of special characters in strings.
+
+- **Backslash Unescaper:**
+  Remove escape sequences from backslashes in text or code, restoring the original characters for proper interpretation.
 
 - **JSON Quotes Escaper / Unescaper:**
   Escape or unescape quotes in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.

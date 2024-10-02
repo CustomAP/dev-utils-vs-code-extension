@@ -108,10 +108,16 @@ export const tools = [
       "Compare and highlight differences between two sets of text or code in a Git-styled format, making it easy to review changes and track modifications.",
   },
   {
-    id: "backslash_escaper_unescaper",
-    name: "Backslash Escaper / Unescaper",
+    id: "backslash_escaper",
+    name: "Backslash Escaper",
     description:
-      "Escape or unescape backslashes in text or code, ensuring proper formatting and handling of special characters in strings.",
+      "Escape backslashes in text or code, ensuring proper formatting and handling of special characters in strings.",
+  },
+  {
+    id: "backslash_unescaper",
+    name: "Backslash Unescaper",
+    description:
+      "Remove escape sequences from backslashes in text or code, restoring the original characters for proper interpretation.",
   },
   {
     id: "json_escaper_unescaper",
