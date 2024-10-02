@@ -4,6 +4,14 @@ All notable changes to the "react-ext" extension will be documented in this file
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.12]
+
+### Added
+
+- Separate out JSON Query Escaper and Unescaper
+- Separate out Backslash Escaper and Unescaper
+- 2 column UI in utilities
+
 ## [0.0.11]
 
 ### Added
