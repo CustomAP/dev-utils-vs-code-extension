@@ -69,8 +69,11 @@
 - **Backslash Unescaper:**
   Remove escape sequences from backslashes in text or code, restoring the original characters for proper interpretation.
 
-- **JSON Quotes Escaper / Unescaper:**
-  Escape or unescape quotes in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.
+- **JSON Quotes Escaper:**
+  Escape quotes in JSON strings, ensuring proper formatting when embedding JSON data within code or other strings.
+
+- **JSON Quotes Unescaper:**
+  Unescape quotes in JSON strings, converting escaped characters back to their original form for accurate representation and readability.
 
 - **String Case Converter:**
   Convert strings between different case formats, such as camelCase, snake_case, PascalCase, etc. for easier manipulation and consistency in your code.

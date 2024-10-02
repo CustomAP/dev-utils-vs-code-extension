@@ -19,13 +19,14 @@ import Base64ToImage from "./utils/base64_to_image/Base64ToImage";
 import RegexTester from "./utils/regex_tester/RegexTester";
 import LoremIpsumGenerator from "./utils/lorem_ipsum_generator/LoremIpsumGenerator";
 import DiffChecker from "./utils/diff_checker/DiffChecker";
-import JsonEscaperUnescaper from "./utils/json_escaper_unescaper/JsonEscaperUnescaper";
 import StringCaseConverter from "./utils/string_case_converter/StringCaseConverter";
 import HtmlStripper from "./utils/html_stripper/HtmlStripper";
 import JwtDecoder from "./utils/jwt_decoder/JwtDecoder";
 import HtmlPrettier from "./utils/html_prettier/HtmlPrettier";
 import BackslashEscaper from "./utils/backslash_escaper/BackslashEscaper";
 import BackslashUnescaper from "./utils/backslash_unescaper/BackslashUnescaper";
+import JsonEscaper from "./utils/json_escaper/JsonEscaper";
+import JsonUnescaper from "./utils/json_unescaper/JsonUnescaper";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -108,10 +109,6 @@ const App = () => {
             element={<DiffChecker vscode={vscode} />}
           />
           <Route
-            path="/util/json_escaper_unescaper"
-            element={<JsonEscaperUnescaper vscode={vscode} />}
-          />
-          <Route
             path="/util/string_case_converter"
             element={<StringCaseConverter vscode={vscode} />}
           />
@@ -134,6 +131,14 @@ const App = () => {
           <Route
             path="/util/backslash_unescaper"
             element={<BackslashUnescaper vscode={vscode} />}
+          />
+          <Route
+            path="/util/json_escaper"
+            element={<JsonEscaper vscode={vscode} />}
+          />
+          <Route
+            path="/util/json_unescaper"
+            element={<JsonUnescaper vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

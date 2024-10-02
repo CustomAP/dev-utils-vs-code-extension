@@ -120,10 +120,16 @@ export const tools = [
       "Remove escape sequences from backslashes in text or code, restoring the original characters for proper interpretation.",
   },
   {
-    id: "json_escaper_unescaper",
-    name: "JSON Quotes Escaper / Unescaper",
+    id: "json_escaper",
+    name: "JSON Quotes Escaper",
     description:
-      "Escape or unescape quotes in JSON strings, making them suitable for embedding in code or displaying in a human-readable format.",
+      "Escape quotes in JSON strings, ensuring proper formatting when embedding JSON data within code or other strings.",
+  },
+  {
+    id: "json_unescaper",
+    name: "JSON Quotes Unescaper",
+    description:
+      "Unescape quotes in JSON strings, converting escaped characters back to their original form for accurate representation and readability.",
   },
   {
     id: "string_case_converter",

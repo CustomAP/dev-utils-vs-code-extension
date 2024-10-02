@@ -1,46 +1,39 @@
 import React, { useState } from "react";
 import { Button, TextArea, Card, H4 } from "@blueprintjs/core";
-import "./JsonEscaperUnescaper.css";
+import "./JsonEscaper.css";
 import Header from "../common/Header";
 import CopyButton from "../common/CopyButton";
 
-interface JsonEscaperUnescaperProps {
+interface JsonEscaperProps {
   initialText?: string;
   vscode: any;
 }
 
-const JsonEscaperUnescaper: React.FC<JsonEscaperUnescaperProps> = ({
+const JsonEscaper: React.FC<JsonEscaperProps> = ({
   initialText = "",
   vscode = null,
 }) => {
   const [inputText, setInputText] = useState<string>(initialText);
   const [escapedText, setEscapedText] = useState<string>("");
-  const [unescapedText, setUnescapedText] = useState<string>("");
 
   const escapeJson = (text: string) => {
     return text.replace(/"/g, '\\"');
-  };
-
-  const unescapeJson = (text: string) => {
-    return text.replace(/\\"/g, '"');
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value;
     setInputText(newText);
     setEscapedText(escapeJson(newText));
-    setUnescapedText(unescapeJson(newText));
   };
 
   const handleClear = () => {
     setInputText("");
     setEscapedText("");
-    setUnescapedText("");
   };
 
   return (
     <div className="holder">
-      <Header title="JSON Escaper/Unescaper" />
+      <Header title="JSON Escaper" />
       <Card className="input-card">
         <H4>Text Input</H4>
         <TextArea
@@ -49,7 +42,7 @@ const JsonEscaperUnescaper: React.FC<JsonEscaperUnescaperProps> = ({
           large={true}
           value={inputText}
           onChange={handleInputChange}
-          placeholder='Enter JSON text with or without escaped quotes (e.g., { "key": "value" })...'
+          placeholder='Enter JSON text (e.g., { "key": "value" })...'
         />
         <div>
           <Button
@@ -60,11 +53,6 @@ const JsonEscaperUnescaper: React.FC<JsonEscaperUnescaperProps> = ({
             Clear Input
           </Button>
           <CopyButton vscode={vscode} text={escapedText} label="Copy Escaped" />
-          <CopyButton
-            vscode={vscode}
-            text={unescapedText}
-            label="Copy Unescaped"
-          />
         </div>
 
         <H4>Escaped Output</H4>
@@ -75,20 +63,11 @@ const JsonEscaperUnescaper: React.FC<JsonEscaperUnescaperProps> = ({
           readOnly={true}
           value={escapedText}
         />
-
-        <H4>Unescaped Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={unescapedText}
-        />
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
-        <p>Here's how the JSON Escaper/Unescaper works:</p>
+        <p>Here's how the JSON Escaper works:</p>
 
         <H4>Example JSON Input</H4>
         <TextArea
@@ -117,23 +96,9 @@ const JsonEscaperUnescaper: React.FC<JsonEscaperUnescaperProps> = ({
   \\"description\\": \\"A developer\\"
 }`}
         />
-
-        <H4>Expected Unescaped Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`{
-  "name": "John "Doe"",
-  "age": 30,
-  "description": "A developer"
-}`}
-        />
       </Card>
     </div>
   );
 };
 
-export default JsonEscaperUnescaper;
+export default JsonEscaper;
