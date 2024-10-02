@@ -166,16 +166,6 @@ const StringCaseConverter: React.FC<StringCaseConverterProps> = ({
     <div className="holder">
       <Header title="String Case Converter" />
       <Card className="input-card">
-        <H4>Text Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={inputText}
-          onChange={handleInputChange}
-          placeholder="Enter text to convert..."
-        />
-
         <HTMLSelect
           options={[
             { label: "camelCase", value: "camelCase" },
@@ -210,14 +200,31 @@ const StringCaseConverter: React.FC<StringCaseConverterProps> = ({
           />
         </div>
 
-        <H4>Converted Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={convertedText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Text Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={inputText}
+              onChange={handleInputChange}
+              placeholder="Enter text to convert..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Converted Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={convertedText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">

@@ -36,24 +36,6 @@ const DiffChecker: React.FC<DiffCheckerProps> = ({
     <div className="holder">
       <Header title="Diff Checker" />
       <Card className="input-card">
-        <H4>Text 1</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={text1}
-          onChange={handleText1Change}
-          placeholder="Enter first text here..."
-        />
-        <H4>Text 2</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={text2}
-          onChange={handleText2Change}
-          placeholder="Enter second text here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -62,6 +44,31 @@ const DiffChecker: React.FC<DiffCheckerProps> = ({
           >
             Clear Input
           </Button>
+        </div>
+
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Text 1</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={text1}
+              onChange={handleText1Change}
+              placeholder="Enter first text here..."
+            />
+          </div>
+          <div className="text-input">
+            <H4>Text 2</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={text2}
+              onChange={handleText2Change}
+              placeholder="Enter second text here..."
+            />
+          </div>
         </div>
 
         <H4>Diff Output</H4>

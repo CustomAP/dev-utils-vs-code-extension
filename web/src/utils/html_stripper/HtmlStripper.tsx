@@ -37,15 +37,6 @@ const HtmlStripper: React.FC<HtmlStripperProps> = ({
     <div className="holder">
       <Header title="HTML Stripper" />
       <Card className="input-card">
-        <H4>HTML Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={htmlText}
-          onChange={handleInputChange}
-          placeholder="Paste HTML data here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -57,39 +48,62 @@ const HtmlStripper: React.FC<HtmlStripperProps> = ({
           <CopyButton vscode={vscode} text={plainText} label="Copy Result" />
         </div>
 
-        <H4>Plain Text Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={plainText}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>HTML Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={htmlText}
+              onChange={handleInputChange}
+              placeholder="Paste HTML data here..."
+            />
+          </div>
+
+          <div className="text-input">
+            <H4>Plain Text Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={plainText}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Here's how the HTML Stripper works:</p>
 
-        <H4>Example HTML Input</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`<html><h1>Hello, World!</h1>How's it going?</html>`}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example HTML Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`<html><h1>Hello, World!</h1>How's it going?</html>`}
+            />
+          </div>
 
-        <H4>Expected Plain Text Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`Hello, World!How's it going?`}
-        />
+          <div className="text-input">
+            <H4>Expected Plain Text Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`Hello, World!How's it going?`}
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

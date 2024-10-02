@@ -46,15 +46,6 @@ const HtmlPrettier: React.FC<HtmlPrettierProps> = ({
     <div className="holder">
       <Header title="HTML Prettier" />
       <Card className="input-card">
-        <H4>HTML Input</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={htmlText}
-          onChange={handleInputChange}
-          placeholder="Paste HTML data here..."
-        />
         <div>
           <Button
             className="clear-button"
@@ -69,40 +60,61 @@ const HtmlPrettier: React.FC<HtmlPrettierProps> = ({
             label="Copy Result"
           />
         </div>
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>HTML Input</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={htmlText}
+              onChange={handleInputChange}
+              placeholder="Paste HTML data here..."
+            />
+          </div>
 
-        <H4>Formatted HTML Output</H4>
-        <TextArea
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={formattedHtml}
-        />
+          <div className="text-input">
+            <H4>Formatted HTML Output</H4>
+            <TextArea
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={formattedHtml}
+              placeholder="Result will be displayed here..."
+            />
+          </div>
+        </div>
       </Card>
 
       <Card className="example-card">
         <H4>Example Usage</H4>
         <p>Below is an example of how to use the HTML Prettier:</p>
 
-        <H4>Example HTML Input</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`<div><h1>Hello World</h1><p>This is an example.</p></div>`}
-        />
-
-        <H4>Expected Formatted Output</H4>
-        <TextArea
-          className="example-output"
-          autoResize={true}
-          fill={true}
-          large={true}
-          readOnly={true}
-          value={`<div>\n  <h1>Hello World</h1>\n  <p>This is an example.</p>\n</div>`}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example HTML Input</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`<div><h1>Hello World</h1><p>This is an example.</p></div>`}
+            />
+          </div>
+          <div className="text-input">
+            <H4>Expected Formatted Output</H4>
+            <TextArea
+              className="example-output"
+              autoResize={true}
+              fill={true}
+              large={true}
+              readOnly={true}
+              value={`<div>\n  <h1>Hello World</h1>\n  <p>This is an example.</p>\n</div>`}
+            />
+          </div>
+        </div>
       </Card>
     </div>
   );

@@ -21,3 +21,15 @@
   background-color: #f7f7f7;
   border-left: 5px solid #137cbd;
 }
+
+.text-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.text-input {
+  flex: 1;
+}
