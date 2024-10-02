@@ -159,23 +159,29 @@ const RegexTester: React.FC<RegexTesterProps> = ({
           readOnly={true}
         />
 
-        <H4>Example Test String</H4>
-        <TextArea
-          className="example-input"
-          autoResize={true}
-          fill={true}
-          large={true}
-          value={`Here are some SSNs: 123-45-6789, 987-65-4321. The following is not a valid SSN: 123-456-7890.`}
-          readOnly={true}
-        />
+        <div className="text-inputs">
+          <div className="text-input">
+            <H4>Example Test String</H4>
+            <TextArea
+              className="example-input"
+              autoResize={true}
+              fill={true}
+              large={true}
+              value={`Here are some SSNs: 123-45-6789, 987-65-4321. The following is not a valid SSN: 123-456-7890.`}
+              readOnly={true}
+            />
+          </div>
 
-        <H4>Expected Result</H4>
+          <div className="text-input">
+            <H4>Expected Result</H4>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `Here are some SSNs: <mark>123-45-6789</mark>, <mark>987-65-4321</mark>. The following is not a valid SSN: 123-456-7890.`,
+              }}
+            />
+          </div>
+        </div>
         <Callout className="example-callout">2 matches found</Callout>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `Here are some SSNs: <mark>123-45-6789</mark>, <mark>987-65-4321</mark>. The following is not a valid SSN: 123-456-7890.`,
-          }}
-        />
       </Card>
     </div>
   );

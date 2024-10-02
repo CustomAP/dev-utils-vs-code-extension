@@ -127,7 +127,12 @@ const RgbToHex: React.FC<RgbToHexProps> = ({
         </div>
 
         <H4>Hex Output</H4>
-        <InputGroup readOnly={true} value={hex} className="hex-field" />
+        <InputGroup
+          readOnly={true}
+          value={hex}
+          className="hex-field"
+          placeholder="Result will be displayed here..."
+        />
       </Card>
 
       <Card className="example-card">
