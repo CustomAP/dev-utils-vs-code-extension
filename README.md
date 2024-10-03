@@ -87,6 +87,12 @@
 - **HTML Prettier:**
   Format and beautify HTML code with proper indentation and spacing, making it more readable and easier to maintain.
 
+- **HTML Entity Encoder:**
+  Convert special characters in text into HTML entities, ensuring proper display in web browsers and preventing issues with HTML rendering.
+
+- **HTML Entity Decoder:**
+  Convert HTML entities back into their corresponding characters, making the text more readable and restoring the original formatting.
+
 ## Why Use Dev Utilities?
 
 - **Productivity Boost:** Perform complex data transformations without leaving your code editor.

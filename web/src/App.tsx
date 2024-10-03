@@ -27,6 +27,8 @@ import BackslashEscaper from "./utils/backslash_escaper/BackslashEscaper";
 import BackslashUnescaper from "./utils/backslash_unescaper/BackslashUnescaper";
 import JsonEscaper from "./utils/json_escaper/JsonEscaper";
 import JsonUnescaper from "./utils/json_unescaper/JsonUnescaper";
+import HtmlEntityEncoder from "./utils/html_entity_encoder/HtmlEntityEncoder";
+import HtmlEntityDecoder from "./utils/html_entity_decoder/HtmlEntityDecoder";
 
 const vscode = (window as any).acquireVsCodeApi();
 
@@ -139,6 +141,14 @@ const App = () => {
           <Route
             path="/util/json_unescaper"
             element={<JsonUnescaper vscode={vscode} />}
+          />
+          <Route
+            path="/util/html_entity_encoder"
+            element={<HtmlEntityEncoder vscode={vscode} />}
+          />
+          <Route
+            path="/util/html_entity_decoder"
+            element={<HtmlEntityDecoder vscode={vscode} />}
           />
           <Route path="*" element={<CardGrid vscode={vscode} />} />
         </Routes>

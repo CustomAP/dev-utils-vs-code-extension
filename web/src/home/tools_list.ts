@@ -155,4 +155,16 @@ export const tools = [
     description:
       "Format and beautify HTML code with proper indentation and spacing, making it more readable and easier to maintain.",
   },
+  {
+    id: "html_entity_encoder",
+    name: "HTML Entity Encoder",
+    description:
+      "Convert special characters in text into HTML entities, ensuring proper display in web browsers and preventing issues with HTML rendering.",
+  },
+  {
+    id: "html_entity_decoder",
+    name: "HTML Entity Decoder",
+    description:
+      "Convert HTML entities back into their corresponding characters, making the text more readable and restoring the original formatting.",
+  },
 ];
