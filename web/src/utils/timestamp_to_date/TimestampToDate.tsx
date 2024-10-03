@@ -15,31 +15,46 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
 }) => {
   const [timestampText, setTimestampText] = useState<string>(initialTimestamp);
   const [dateText, setDateText] = useState<string>("");
+  const [isoText, setIsoText] = useState<string>("");
+  const [localDateText, setLocalDateText] = useState<string>("");
 
   const convertTimestampToDate = (timestampStr: string) => {
     const timestamp = Number(timestampStr);
     if (!isNaN(timestamp)) {
       const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
       setDateText(date.toUTCString());
+      setIsoText(date.toISOString());
+      setLocalDateText(date.toString());
     } else {
       setDateText("Invalid timestamp");
+      setIsoText("");
+      setLocalDateText("");
     }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newTimestampText = e.target.value;
     setTimestampText(newTimestampText);
-    convertTimestampToDate(newTimestampText);
+    if (newTimestampText.trim() === "") {
+      // Clear all outputs if input is empty
+      setDateText("");
+      setIsoText("");
+      setLocalDateText("");
+    } else {
+      convertTimestampToDate(newTimestampText);
+    }
   };
 
   const handleClear = () => {
     setTimestampText("");
     setDateText("");
+    setIsoText("");
+    setLocalDateText("");
   };
 
   return (
     <div className="holder">
-      <Header title="Timestamp to Date Converter" />
+      <Header title="Unix Timestamp to Date Converter" />
       <Card className="input-card">
         <div>
           <Button
@@ -49,32 +64,65 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           >
             Clear Input
           </Button>
-          <CopyButton vscode={vscode} text={dateText} label="Copy Result" />
         </div>
 
+        <H4>Unix Timestamp Input</H4>
         <div className="text-inputs">
-          <div className="text-input">
-            <H4>Timestamp Input</H4>
-            <TextArea
-              autoResize={true}
-              fill={true}
-              large={true}
-              value={timestampText}
-              onChange={handleInputChange}
-              placeholder="Enter Unix timestamp here..."
-            />
-          </div>
+          <TextArea
+            autoResize={true}
+            fill={true}
+            large={true}
+            value={timestampText}
+            onChange={handleInputChange}
+            placeholder="Enter Unix timestamp here..."
+          />
+        </div>
 
-          <div className="text-input">
-            <H4>Date Output</H4>
-            <TextArea
-              autoResize={true}
-              fill={true}
-              large={true}
-              readOnly={true}
-              value={dateText}
-              placeholder="Result will be displayed here..."
-            />
+        <H4>Date Time (UTC):</H4>
+        <div className="text-inputs">
+          <TextArea
+            autoResize={true}
+            fill={true}
+            large={true}
+            readOnly={true}
+            value={dateText}
+            className="text-input"
+            placeholder="Result will be displayed here..."
+          />
+          <div className="copy-button">
+            <CopyButton vscode={vscode} text={dateText} label="Copy" />
+          </div>
+        </div>
+
+        <H4>ISO 8601:</H4>
+        <div className="text-inputs">
+          <TextArea
+            autoResize={true}
+            fill={true}
+            large={true}
+            readOnly={true}
+            value={isoText}
+            className="text-input"
+            placeholder="Result will be displayed here..."
+          />
+          <div className="copy-button">
+            <CopyButton vscode={vscode} text={isoText} label="Copy" />
+          </div>
+        </div>
+
+        <H4>Date Time (Your Time Zone):</H4>
+        <div className="text-inputs">
+          <TextArea
+            autoResize={true}
+            fill={true}
+            large={true}
+            readOnly={true}
+            value={localDateText}
+            className="text-input"
+            placeholder="Result will be displayed here..."
+          />
+          <div className="copy-button">
+            <CopyButton vscode={vscode} text={localDateText} label="Copy" />
           </div>
         </div>
       </Card>
@@ -85,31 +133,52 @@ const TimestampToDate: React.FC<TimestampToDateProps> = ({
           Below is an example of how to use the Timestamp to Date Converter:
         </p>
 
-        <div className="text-inputs">
-          <div className="text-input">
-            <H4>Example Timestamp Input</H4>
-            <TextArea
-              className="example-input"
-              autoResize={true}
-              fill={true}
-              large={true}
-              readOnly={true}
-              value="1694006400"
-            />
-          </div>
+        <H4>Example Timestamp Input:</H4>
 
-          <div className="text-input">
-            <H4>Expected Date Output</H4>
-            <TextArea
-              className="example-output"
-              autoResize={true}
-              fill={true}
-              large={true}
-              readOnly={true}
-              value="Wed, 06 Sep 2023 13:20:00 GMT"
-            />
-          </div>
-        </div>
+        <TextArea
+          className="example-input"
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          value="1694006400"
+          placeholder="Example timestamp will be displayed here..."
+        />
+
+        <H4>Date Time (UTC):</H4>
+
+        <TextArea
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          className="example-input"
+          value="Wed, 06 Sep 2023 13:20:00 GMT"
+          placeholder="Example date in UTC will be displayed here..."
+        />
+
+        <H4>ISO 8601:</H4>
+
+        <TextArea
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          className="example-input"
+          value="2023-09-06T13:20:00Z"
+          placeholder="Example ISO 8601 date will be displayed here..."
+        />
+
+        <H4>Date Time (Your Time Zone):</H4>
+        <TextArea
+          autoResize={true}
+          fill={true}
+          large={true}
+          readOnly={true}
+          className="example-input"
+          value="Wed, 06 Sep 2023 15:20:00 CEST" // Adjust based on the example
+          placeholder="Example date in your time zone will be displayed here..."
+        />
       </Card>
     </div>
   );

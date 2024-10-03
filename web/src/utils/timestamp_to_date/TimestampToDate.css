@@ -36,8 +36,14 @@
   justify-content: space-between;
   width: 100%;
   gap: 10px;
+  margin-top: -10px;
+  align-items: center;
 }
 
 .text-input {
+  flex: 5;
+}
+
+.copy-button {
   flex: 1;
 }
